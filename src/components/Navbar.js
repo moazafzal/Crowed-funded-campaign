@@ -21,7 +21,7 @@ const Navbar = (props) => {
           active={activeItem === 'locations'}
           onClick={handleItemClick}
         >Tokens: {props.tokens}</Menu.Item>
-        {props.contractAddress?<><Menu.Item position='right'>Address: {props.contractAddress} </Menu.Item></>:
+        {props.contractAddress?<><Menu.Item position='right'>Address: {props.contractAddress.slice(0,6)}....{props.contractAddress.slice(38,42)} </Menu.Item></>:
         <Menu.Item position='right' as='button' onClick={()=>{props.connect()}}>connect</Menu.Item>}
         
       </Menu>
